@@ -13,6 +13,7 @@ import {
   superLawyers,
   servedCities,
   locations,
+  offices,
 } from "@/lib/site";
 import { Button, Eyebrow, Heading, GoldRule, Stars } from "./ui";
 import { Icon } from "./Icons";
@@ -418,6 +419,114 @@ export function TestimonialsSection() {
 }
 
 // ---- Where We Serve --------------------------------------------------------
+// ---- Fitzgerald office spotlight (real local photos) -----------------------
+export function FitzgeraldSpotlight() {
+  const office = offices.find((o) => o.id === "fitzgerald");
+  return (
+    <section className="bg-white py-20">
+      <div className="mx-auto max-w-container px-4 md:px-6">
+        <FadeUp className="mb-12 text-center">
+          <Eyebrow>Now Serving Fitzgerald</Eyebrow>
+          <Heading center>A Second Office in Fitzgerald, GA</Heading>
+          <GoldRule center />
+          <p className="mx-auto max-w-2xl text-navy/70">
+            Jody D. Peterman, LLC now serves injured people and families in
+            Fitzgerald and Ben Hill County from a second office in the heart of
+            downtown.
+          </p>
+        </FadeUp>
+
+        <div className="grid items-center gap-10 lg:grid-cols-2">
+          {/* Real Fitzgerald photo collage */}
+          <FadeUp>
+            {/* Office-building photo goes in the large slot below once provided;
+                showing a real downtown Fitzgerald photo in the meantime. */}
+            <div className="grid grid-cols-2 gap-3">
+              <div className="col-span-2 overflow-hidden rounded-2xl shadow-card">
+                <Image
+                  src="/images/fitzgerald-downtown-central.jpg"
+                  alt="Downtown Fitzgerald, Georgia — Central Avenue"
+                  width={1400}
+                  height={933}
+                  loading="lazy"
+                  className="h-64 w-full object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-2xl shadow-soft">
+                <Image
+                  src="/images/fitzgerald-downtown-main.jpg"
+                  alt="Main Street in downtown Fitzgerald, Georgia"
+                  width={1400}
+                  height={933}
+                  loading="lazy"
+                  className="h-40 w-full object-cover"
+                />
+              </div>
+              <div className="overflow-hidden rounded-2xl shadow-soft">
+                <Image
+                  src="/images/fitzgerald-water-tower.jpg"
+                  alt="The Fitzgerald, Georgia water tower"
+                  width={1400}
+                  height={933}
+                  loading="lazy"
+                  className="h-40 w-full object-cover"
+                />
+              </div>
+            </div>
+            <p className="mt-3 text-center text-[11px] text-navy/40">
+              Photos of Fitzgerald, GA by Michael Rivera, CC BY-SA 4.0
+            </p>
+          </FadeUp>
+
+          {/* Office details */}
+          <FadeUp delay={0.1}>
+            <h3 className="font-serif text-2xl font-bold text-navy">
+              Local Help in Fitzgerald &amp; Ben Hill County
+            </h3>
+            <GoldRule />
+            <p className="text-navy/75">
+              Whether you were hurt in a crash on US-129, injured on the job, or
+              lost a loved one to someone else&apos;s negligence, you don&apos;t
+              have to travel far to put an experienced trial lawyer in your
+              corner. Meet with us at our downtown Fitzgerald office.
+            </p>
+
+            <div className="mt-6 flex items-start gap-3 rounded-2xl border border-black/5 bg-warm p-5 shadow-soft">
+              <span className="flex h-11 w-11 flex-none items-center justify-center rounded-xl bg-navy text-gold">
+                <Icon name="pin" size={22} />
+              </span>
+              <div>
+                <div className="text-xs font-semibold uppercase tracking-wide text-gold-dark">
+                  {office.label}
+                </div>
+                <div className="mt-1 font-semibold text-navy">
+                  {office.street}
+                  <br />
+                  {office.city}, {office.state} {office.zip}
+                </div>
+                <a
+                  href={office.phoneHref}
+                  className="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-navy/70 hover:text-gold-dark"
+                >
+                  <Icon name="phone" size={15} className="text-gold-dark" />
+                  {office.phone}
+                </a>
+              </div>
+            </div>
+
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button href="/locations/fitzgerald">Fitzgerald Office Details</Button>
+              <Button href="/contact" variant="outline">
+                Free Case Evaluation
+              </Button>
+            </div>
+          </FadeUp>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function WhereWeServe() {
   const primary = locations.find((l) => l.primary);
   return (

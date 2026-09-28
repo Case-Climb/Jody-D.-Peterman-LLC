@@ -12,7 +12,7 @@ import { PageHero, RelatedLinks, TrustBadgeRow } from "@/components/sections";
 export const metadata = buildMetadata({
   title: "Contact Us — Free Case Evaluation",
   description:
-    "Contact Jody D. Peterman, LLC at 304 N. Ashley Street in Valdosta, GA. Call 229-588-2608 for a free case evaluation. We represent clients throughout Georgia.",
+    "Contact Jody D. Peterman, LLC — offices in Valdosta (304 N. Ashley St) and Fitzgerald (107 E. Pine St), GA. Call 229-588-2608 for a free case evaluation.",
   path: "/contact",
 });
 

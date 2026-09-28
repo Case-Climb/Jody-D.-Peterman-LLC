@@ -12,6 +12,7 @@ import {
   HowItWorks,
   ReviewsSection,
   WhereWeServe,
+  FitzgeraldSpotlight,
   CtaBanner,
   TrustBadgeRow,
   AwardsBand,
@@ -115,6 +116,7 @@ export default function HomePage() {
       <CtaBanner />
       <StoryBlock />
       <HowItWorks />
+      <FitzgeraldSpotlight />
       <WhereWeServe />
       <ReviewsSection />
       <CtaBanner
