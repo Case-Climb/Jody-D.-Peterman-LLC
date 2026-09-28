@@ -150,8 +150,8 @@ export default function Footer() {
       {/* Photo credits */}
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-container px-6 py-3 text-center text-[11px] text-white/35">
-          City &amp; courthouse photographs by Bubba73, Michael Rivera and John
-          Trainor via Wikimedia Commons, licensed under CC BY-SA / CC BY.
+          City photographs by Bubba73, Michael Rivera, John Trainor and Mjrmtg
+          via Wikimedia Commons, licensed under CC BY-SA / CC BY.
         </div>
       </div>
 
